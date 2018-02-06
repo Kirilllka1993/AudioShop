@@ -1,0 +1,6 @@
+*.iml
+*.zip
+*.rar
+*.jar
+**/target/
+**/.idea/

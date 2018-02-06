@@ -1,0 +1,77 @@
+@import "default.css";
+
+/* navigation */
+
+nav ul {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    height: 40px;
+}
+
+nav li:hover {
+    color: white;
+}
+
+section.active-section {
+    display: block;
+}
+
+section.inactive-section {
+    display: none;
+}
+
+/*  */
+
+.section-description {
+    font: 30px "Nixie One", Tahoma, serif;
+    height: 40px;
+}
+
+form {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.container {
+    position: relative;
+}
+
+input {
+    width: 100%;
+}
+
+.accept {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#accept {
+    width: 20px;
+    padding-top: 5px;
+}
+
+/* footer */
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-footer{
+ display: none;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .md-section {
+        display: none;
+    }
+}

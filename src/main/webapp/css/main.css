@@ -1,0 +1,80 @@
+@import "default.css";
+
+ul.pagination {
+    display: table;
+    padding: 0;
+    margin: 0 auto 30px;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: rgba(68, 88, 131, 0.2);
+    color: white;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #010007;
+}
+
+
+.section-lead {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.section-paragraph {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+
+.item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.item .jumbotron {
+    background: transparent;
+}
+
+.item .thumbnail {
+    background: transparent;
+    width: 300px;
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+.item .thumbnail:hover {
+    background-color: rgba(68, 88, 131, 0.2);
+}
+
+.item .caption a {
+    color: white;
+}
+
+.item .caption h4, h5 {
+    align-content: center;
+    margin: 0;
+}
+
+.item .caption .price {
+    padding: 15px;
+    color: white;
+    font: 1.2em "Nixie One", Tahoma, serif;
+}
+@media (max-width: 768px) {
+    .thumbnail {
+        position: inherit;
+        margin: auto;
+    }
+}

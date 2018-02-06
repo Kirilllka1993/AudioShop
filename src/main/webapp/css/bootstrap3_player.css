@@ -1,0 +1,91 @@
+.playa .button-default, .btn, .btn-lg, .btn, .btn-block {
+    border-radius: 3px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.playa .button-default:hover, .btn:hover, .btn-lg:hover, .btn:hover, .btn-block:hover {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.playa .table{
+    margin: 20px 0 20px 20px;
+    width: 63%;
+    max-width: none;
+}
+
+.playa input[type="range"] {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 0.5em;
+    opacity: 0.5;
+    height: 1em;
+    top: 2px;
+    position: relative;
+}
+
+.playa .thumbnail {
+    color: #1a1c20;
+    padding: 0;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.playa img {
+    margin: 20px 0;
+}
+
+/* sliders and buttons need a uniform height */
+.playa .btn-group .btn {
+    display: inline-block;
+    float: none;
+    height: 2.2em;
+}
+
+/*  contains the attribution link */
+.playa .row:nth-child(4) {
+    overflow: hidden;
+}
+
+/* .spin is used to rotate glyphicon glyphicon-refresh */
+.spin {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+
+.well {
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    display: block;
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Nixie One';
+    src: url('../fonts/Nixie_One/NixieOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Anaheim';
+    src: url('../fonts/Anaheim/Anaheim-Regular.ttf') format('truetype');
+}
+
+/* general */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+* {
+    color: rgba(214, 214, 214, 0.73);
+    font: 1.02em "Anaheim", Tahoma, serif;
+}
+
+body {
+    margin-top: 60px;
+    background-color: #010007;
+}
+
+main {
+    padding-bottom: 150px;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0
+}
+
+input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 5px 0;
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+    width: 50%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #010007;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    outline: none;
+}
+
+/* navigation */
+
+.nav-menu-item {
+    font: 1.5em "Nixie One", bold, Tahoma, serif;
+}
+
+.nav-menu-item-inactive {
+    color: rgba(214, 214, 214, 0.73);
+}
+
+.nav-menu-item-active {
+    color: white;
+}
+
+nav {
+    -webkit-transition: padding-top 0.3s;
+    -moz-transition: padding-top 0.3s;
+    -ms-transition: padding-top 0.3s;
+    -o-transition: padding-top 0.3s;
+    transition: padding-top 0.3s;
+}
+
+.navbar-nav, .dropdown {
+    height: 50px;
+}
+
+.avatar-a {
+    padding: 0;
+}
+
+.simple-navbar {
+    text-align: center;
+    background: #1a1c20 no-repeat center center scroll;
+}
+
+.nav-menu-item {
+    font-size: 1.2em;
+}
+
+.avatar-nav {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.simple-navbar .dropdown-menu {
+    background-color: #1a1c20;
+}
+
+.dropdown-menu li a {
+    color: rgba(214, 214, 214, 0.73);
+}
+
+.dropdown-menu li a:hover {
+    color: white;
+    background: transparent;
+}
+
+.avatar {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* buttons */
+
+.btn-custom, .input-file-container {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.1em;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.btn-play {
+    width: 40px;
+    height: 40px;
+    background: 10px url("../images/play_btn.png") no-repeat;
+    background-size: 60%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.5;
+    padding: 5px;
+}
+
+.btn-play:hover {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-play:active {
+    background-image: url("../images/stop_btn.png");
+}
+
+.btn-custom:hover {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+    color: rgba(214, 214, 214, 0.4);
+}
+
+::-moz-placeholder {
+    color: rgba(214, 214, 214, 0.4);
+}
+
+:-ms-input-placeholder {
+    color: rgba(214, 214, 214, 0.4);
+}
+
+:-moz-placeholder {
+    color: rgba(214, 214, 214, 0.4);
+}
+
+/* other */
+
+hr {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .25);
+}
+
+/* footer */
+
+footer {
+    z-index: 1;
+    color: rgb(97, 98, 102);
+    font: 1.2em "Anaheim", Tahoma, serif;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    background-color: #010007;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-wrap ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-wrap a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-wrap a:hover {
+    text-decoration: underline;
+}
+
+.footer-wrap header {
+    margin: 10px 0;
+}
+
+.copyright-wrap p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.copyright-wrap .container:first-child {
+    padding: 0;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .complex-navbar {
+        background: #1a1c20 none;
+        padding-top: 0;
+    }
+
+    .nav-footer {
+        display: none;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
