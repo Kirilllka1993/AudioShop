@@ -180,4 +180,13 @@ public class AccountLogic {
         }
     }
 
+    public byte[] loadImage(int accountId) throws LogicException {
+        try (Connection connection = ConnectionPool.getInstance().getConnection()) {
+            AccountDAO accountDAO = new AccountDAO(connection);
+            return accountDAO.findImage(accountId);
+        } catch (SQLException | DAOException e) {
+            throw new LogicException("Error while loading image.", e);
+        }
+    }
+
 }

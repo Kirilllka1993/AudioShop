@@ -44,6 +44,7 @@ public class AccountDAO {
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_PASSWORD = "password";
     private static final String COLUMN_ADMIN_RIGHTS = "is_admin";
+    private static final String COLUMN_AVATAR = "avatar";
 
     public AccountDAO(Connection connection) {
         this.connection = connection;
@@ -149,6 +150,12 @@ public class AccountDAO {
                 account.setLastName(resultSet.getString(COLUMN_LAST_NAME));
                 account.setLogin(resultSet.getString(COLUMN_LOGIN));
                 account.setEmail(resultSet.getString(COLUMN_EMAIL));
+                Blob avatar = resultSet.getBlob(COLUMN_AVATAR);
+                if (avatar == null) {
+                    account.setAvatar(null);
+                } else {
+                    account.setAvatar(avatar.getBytes(1, (int) avatar.length()));
+                }
                 account.setAdmin(resultSet.getBoolean(COLUMN_ADMIN_RIGHTS));
                 return account;
             } else {
@@ -171,6 +178,12 @@ public class AccountDAO {
                 account.setLastName(resultSet.getString(COLUMN_LAST_NAME));
                 account.setLogin(resultSet.getString(COLUMN_LOGIN));
                 account.setEmail(resultSet.getString(COLUMN_EMAIL));
+                Blob avatar = resultSet.getBlob(COLUMN_AVATAR);
+                if (avatar == null) {
+                    account.setAvatar(null);
+                } else {
+                    account.setAvatar(avatar.getBytes(1, (int) avatar.length()));
+                }
                 account.setAdmin(resultSet.getBoolean(COLUMN_ADMIN_RIGHTS));
                 accounts.add(account);
             }
@@ -191,6 +204,12 @@ public class AccountDAO {
                 account.setLastName(resultSet.getString(COLUMN_LAST_NAME));
                 account.setLogin(resultSet.getString(COLUMN_LOGIN));
                 account.setEmail(resultSet.getString(COLUMN_EMAIL));
+                Blob avatar = resultSet.getBlob(COLUMN_AVATAR);
+                if (avatar == null) {
+                    account.setAvatar(null);
+                } else {
+                    account.setAvatar(avatar.getBytes(1, (int) avatar.length()));
+                }
                 account.setAdmin(resultSet.getBoolean(COLUMN_ADMIN_RIGHTS));
                 return account;
             } else {
@@ -256,5 +275,18 @@ public class AccountDAO {
         }
     }
 
+    public byte[] findImage(int accountId) throws DAOException {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SQL_LOAD_IMAGE)) {
+            preparedStatement.setInt(1, accountId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            byte[] avatar = null;
+            while (resultSet.next()) {
+                avatar = resultSet.getBytes(COLUMN_AVATAR);
+            }
+            return avatar;
+        } catch (SQLException e) {
+            throw new DAOException("Error while searching for account avatar in database.", e);
+        }
+    }
 
 }

@@ -112,6 +112,12 @@ public enum CommandType {
             this.role = EnumSet.of(Visitor.Role.ADMIN, Visitor.Role.USER);
         }
     },
+    LOAD_IMAGE {
+        {
+            this.command = new LoadImageCommand();
+            this.role = EnumSet.of(Visitor.Role.ADMIN, Visitor.Role.USER);
+        }
+    },
     LOAD_TRACK {
         {
             this.command = new LoadTrackCommand();

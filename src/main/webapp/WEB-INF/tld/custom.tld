@@ -7,7 +7,7 @@
 
     <tlib-version>1.0</tlib-version>
     <short-name>adt</short-name>
-    <uri>http://suboch.by/jsp/</uri>
+    <uri>http://kazimirov.by/jsp/</uri>
     <tag>
         <name>admin</name>
         <tag-class>by.kazimirov.tag.AdminTag</tag-class>
